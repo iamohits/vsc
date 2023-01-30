@@ -1,0 +1,76 @@
+{
+  "name": "virtualify",
+  "private": true,
+  "description": "Virtualify Software Consultancy",
+  "version": "0.0.1",
+  "author": "Mohit S <iamohit.com@gmail.com>",
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@mdx-js/mdx": "^2.2.1",
+    "@mdx-js/react": "^2.2.1",
+    "@react-icons/all-files": "^4.1.0",
+    "antd": "^5.1.6",
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^5.5.0",
+    "gatsby-link": "^5.5.0",
+    "gatsby-plugin-antd": "^2.2.0",
+    "gatsby-plugin-google-analytics": "^5.5.0",
+    "gatsby-plugin-htaccess": "^1.4.0",
+    "gatsby-plugin-image": "^3.5.0",
+    "gatsby-plugin-less": "^7.5.0",
+    "gatsby-plugin-manifest": "^5.5.0",
+    "gatsby-plugin-mdx": "^5.5.0",
+    "gatsby-plugin-netlify": "^5.1.0",
+    "gatsby-plugin-offline": "^6.5.0",
+    "gatsby-plugin-preact": "^7.5.0",
+    "gatsby-plugin-react-helmet": "^6.5.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.5.0",
+    "gatsby-plugin-styled-components": "^6.5.0",
+    "gatsby-plugin-zopfli": "^2.0.0",
+    "gatsby-source-apiserver": "^2.1.8",
+    "gatsby-source-filesystem": "^5.5.0",
+    "gatsby-transformer-json": "^5.5.0",
+    "gatsby-transformer-remark": "^6.5.0",
+    "gatsby-transformer-sharp": "^5.5.0",
+    "moment": "^2.29.4",
+    "npm-check-updates": "^16.6.3",
+    "preact": "^10.11.3",
+    "preact-render-to-string": "^5.2.6",
+    "prismjs": "^1.29.0",
+    "prop-types": "^15.8.1",
+    "rc-tween-one": "^3.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.3.0",
+    "react-type-animation": "^2.1.2",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.15.2",
+    "prettier": "2.8.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamohits/iamohits.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

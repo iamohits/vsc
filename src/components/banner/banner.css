@@ -1,0 +1,36 @@
+:root {
+  --ThemeGreen: #72da8e;
+  --ThemeBlue: #10b2ff;
+  --ThemePurple: #9e44f6;
+  --Grad: linear-gradient(
+    var(--ThemePurple),
+    var(--ThemeBlue),
+    var(--ThemeGreen)
+  );
+}
+.banner {
+  min-height: 100%;
+  min-height: 100vh;
+}
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner-container .devNames {
+  color: var(--ThemePurple);
+  font-size: calc(2.2 * (1.2vh + 1.2vw));
+  font-family: monospace;
+  text-shadow: 5px 3px 8px rgba(8, 8, 8, 0.8);
+}
+
+.banner-container .subTitles {
+  font-size: calc(1.5 * (1vh + 1vw));
+  font-family: "Courier New", Courier, monospace;
+  color: var(--ThemeGreen);
+  text-shadow: 5px 3px 8px rgba(8, 8, 8, 0.8);
+}
+.jumbotron {
+  background-color: hsla(0, 0%, 0%, 0.8);
+}
