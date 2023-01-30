@@ -5,7 +5,7 @@ import Metas from "../components/Metas"
 
 const AboutPage = () => (
   <MainLayout>
-    <Metas title="Mohit K Srivastava | About Me |  A knowledgeable, logical and a observant professional for software Engineering and Computer Programing" />
+    <Metas title="About | VSC" />
     <About />
   </MainLayout>
 )

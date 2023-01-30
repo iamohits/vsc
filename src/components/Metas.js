@@ -76,6 +76,7 @@ Metas.defaultProps = {
   meta: [],
   keywords: [],
   description: ``,
+  title: ``,
 }
 
 Metas.propTypes = {

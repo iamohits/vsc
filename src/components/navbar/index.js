@@ -8,10 +8,14 @@ import { navMenu } from "../../content/navMenu"
 const Navbar = () => {
   const [selectedMenu, setSelectedMenu] = useState("/")
   const nm = navMenu
+  // Check if window is defined (so if in the browser or in node.js).
+  const isBrowser = typeof window !== "undefined"
   useEffect(() => {
-    let pathName = window.location.pathname
-    if (pathName !== "/") pathName = pathName.replaceAll("/", "")
-    setSelectedMenu(pathName)
+    if (isBrowser) {
+      let pathName = window.location.pathname
+      if (pathName !== "/") pathName = pathName.replaceAll("/", "")
+      setSelectedMenu(pathName)
+    }
   }, [])
 
   return (
