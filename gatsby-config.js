@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://virtualifyme.com`,
   },
   plugins: [
-    "gatsby-plugin-preact",
+    // "gatsby-plugin-preact",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
