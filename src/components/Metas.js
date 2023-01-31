@@ -39,7 +39,7 @@ function Metas({ description, lang, meta, keywords, title }) {
       meta={[
         {
           name: `google-site-verification`,
-          content: "3kX8SgptSvdF5fGJMtyEQ7aCWMER-RPtF_qxMPnSBQk",
+          content: "pn2noD6LuKvWuKlgJBqPziiMKl893_2dk67kbzpb-ng",
         },
         {
           name: `description`,
@@ -50,8 +50,24 @@ function Metas({ description, lang, meta, keywords, title }) {
           content: metaDescription,
         },
         {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: `https://virtualifyme.com/`,
+        },
+        {
+          name: `og:title`,
+          content: title,
+        },
+        {
+          name: `og:image`,
+          content: `https://i.imgur.com/zrK0U27.jpg`,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:title`,
