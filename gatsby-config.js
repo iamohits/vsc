@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `virtualify`,
-    description: ``,
-    keywords: "",
+    description: `Enhance your technology with our innovative software solutions. Join the ranks of satisfied clients and revolutionize the way you do business with our company.`,
+    keywords: "Software, Technology, Solutions, Innovative, Business, Development, Custom, Enterprise, Digital, Platform, Integration, Automation, Analytics, Support, Implementation",
     author: `@mohit5783`,
     siteUrl: `https://virtualifyme.com`,
   },

@@ -63,7 +63,7 @@ function Metas({ description, lang, meta, keywords, title }) {
         },
         {
           name: `twitter:image`,
-          content: `https://i.imgur.com/rT8UWn8.jpg`,
+          content: `https://i.imgur.com/zrK0U27.jpg`,
         },
         { name: `keywords`, content: site.siteMetadata.keywords },
       ].concat(meta)}
