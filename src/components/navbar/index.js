@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Menu } from "antd"
-import LogoImage from "../logo"
+import LogoImage from "../imagejs/logo"
 import { navigate } from "gatsby-link"
 import "./navbar.css"
 import { navMenu } from "../../content/navMenu"
@@ -8,30 +8,43 @@ import { navMenu } from "../../content/navMenu"
 const Navbar = () => {
   const [selectedMenu, setSelectedMenu] = useState("/")
   const nm = navMenu
-  // Check if window is defined (so if in the browser or in node.js).
   const isBrowser = typeof window !== "undefined"
   useEffect(() => {
     if (isBrowser) {
       let pathName = window.location.pathname
-      if (pathName !== "/") pathName = pathName.replaceAll("/", "")
+      if (pathName !== "/") {
+        pathName = pathName.replaceAll("/", "")
+      } else {
+        pathName = "home"
+      }
       setSelectedMenu(pathName)
     }
-  }, [])
-
+  }, [isBrowser])
+  const onMenuItemClicked = sm => {
+    console.log(sm)
+    if (sm.key === "home") {
+      navigate("/")
+    } else {
+      navigate("/" + sm.key)
+    }
+  }
   return (
     <>
       <div
         onClick={() => navigate("/")}
+        onKeyDown={() => navigate("/")}
         style={{
           float: "left",
           marginTop: 2,
           display: "flex",
         }}
+        role="presentation"
       >
         <LogoImage />
       </div>
       <Menu
         mode="horizontal"
+        onClick={onMenuItemClicked}
         selectedKeys={selectedMenu}
         theme="dark"
         style={{
@@ -41,45 +54,8 @@ const Navbar = () => {
           display: "flex",
           alignItems: "center",
         }}
-      >
-        {nm.map(mi => (
-          <Menu.Item
-            key={mi.key}
-            onClick={() => navigate(mi.navigateTo)}
-            icon={mi.icon}
-          >
-            {mi.displayName}
-          </Menu.Item>
-        ))}
-        {/* <Menu.Item
-          key="/"
-          onClick={() => navigate("/")}
-          icon={<HomeOutlined style={{ fontSize: 28 }} />}
-        >
-          Home
-        </Menu.Item>
-        <Menu.Item
-          key="about"
-          onClick={() => navigate("/about")}
-          icon={<IdcardOutlined style={{ fontSize: 28 }} />}
-        >
-          About
-        </Menu.Item>
-        <Menu.Item
-          key="career-timeline"
-          onClick={() => navigate("/career-timeline")}
-          icon={<MdTimeline style={{ fontSize: 28 }} />}
-        >
-          Career Timeline
-        </Menu.Item>
-        <Menu.Item
-          key="stackoverflow"
-          onClick={() => navigate("/stackoverflow")}
-          icon={<FaStackOverflow style={{ fontSize: 28 }} />}
-        >
-          StackOverFlow
-        </Menu.Item> */}
-      </Menu>
+        items={nm}
+      />
     </>
   )
 }

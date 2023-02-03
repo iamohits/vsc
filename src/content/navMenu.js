@@ -6,27 +6,23 @@ import { FaHome } from "@react-icons/all-files/fa/FaHome"
 
 export const navMenu = [
   {
-    key: "/",
-    navigateTo: "/",
+    key: "home",
     icon: <FaHome className="IconStyle" />,
-    displayName: "Home",
+    label: "Home",
   },
   {
     key: "about",
-    navigateTo: "/about",
     icon: <FaTheaterMasks className="IconStyle" />,
-    displayName: "About Us",
+    label: "About Us",
   },
   {
     key: "services",
-    navigateTo: "/services",
     icon: <RiServiceFill className="IconStyle" />,
-    displayName: "Services",
+    label: "Services",
   },
   {
     key: "contact",
-    navigateTo: "/contact",
     icon: <TiContacts className="IconStyle" />,
-    displayName: "Contact Us",
+    label: "Contact Us",
   },
 ]

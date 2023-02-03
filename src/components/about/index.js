@@ -1,6 +1,6 @@
 import React from "react"
 import { Card, Col, Row, Typography, Badge } from "antd"
-import AboutMeImage from "../aboutme"
+import AboutMeImage from "../imagejs/aboutme"
 import moment from "moment"
 import { IdcardOutlined } from "@ant-design/icons"
 

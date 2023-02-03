@@ -2,7 +2,7 @@ import React from "react"
 import "./SiteFooter.css"
 
 import { Col, Row } from "antd"
-import LogoImage from "../logo"
+import LogoImage from "../imagejs/logo"
 import { FaStackOverflow } from "@react-icons/all-files/fa/FaStackOverflow"
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
