@@ -2,7 +2,7 @@
   --ThemeGreen: #72da8e;
   --ThemeBlue: #10b2ff;
   --ThemePurple: #9e44f6;
-  --Grad: linear-gradient(
+  --Grad2Right: linear-gradient(
     to right,
     var(--ThemePurple),
     var(--ThemeBlue),
@@ -12,14 +12,13 @@
 
 .sliderStyle {
   height: 80vh;
-  /* background-image: url('../../images/Banner-3.webp'); */
   background-color: hsla(0, 0%, 0%, 0.8);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .slick-dots li.slick-active button {
-  background: var(--Grad) !important;
+  background: var(--Grad2Right) !important;
   animation: AnimDots 5s ease-in-out 1ms 1 normal forwards;
 }
 @keyframes AnimDots {
@@ -39,37 +38,63 @@
 }
 .sliderTextContent {
   font-family: Verdana;
-  font-size: 30px;
+  font-size: calc(1.5 * (1.2vh + 1.2vw));
   -webkit-text-stroke: 1px #000;
   text-shadow: #000 1px 3px 4px;
   padding: 10% 25% 0px 5%;
   color: white;
 }
+
 .btnKnowMore {
   margin: 1% 0px 0px 5%;
   border: none;
   padding: 10px 44px;
-  font-size: 36px;
+  font-size: calc(1.5 * (1.2vh + 1.2vw));
   position: relative;
   background: hsla(0, 0%, 0%, 0);
 }
-.btnKnowMore::before {
-  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  content: "";
-  width: 30%;
-  height: 100%;
-  background: var(--Grad);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+
 .btnKnowMore .btn-text {
   color: white;
   mix-blend-mode: lighten;
 }
 
 .btnKnowMore:hover::before {
-  background: var(--Grad);
+  background: var(--Grad2Right);
   opacity: 1;
   width: 100%;
+}
+@media only screen and (max-width: 480px),
+  only screen and (max-device-width: 480px) {
+  .sliderTextContent {
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+  }
+  .sliderStyle {
+    display: grid;
+    align-items: center;
+  }
+  .btnKnowMore {
+    padding: 10px;
+    margin: 10px;
+    border: #000 2px solid;
+    background: hsla(0, 0%, 0%, 0.7);
+  }
+  .btnKnowMore .btn-text {
+    color: #fff;
+    mix-blend-mode: unset;
+  }
+}
+@media (hover) {
+  .btnKnowMore::before {
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: "";
+    width: 30%;
+    height: 100%;
+    background: var(--Grad2Right);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
